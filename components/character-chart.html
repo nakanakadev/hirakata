@@ -1,0 +1,57 @@
+    <!-- Character Chart Content -->
+    <main class="py-16 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                    {{chartTitle}}
+                </h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                    {{chartSubtitle}}
+                </p>
+            </div>
+
+            <!-- Basic Characters Table -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-slate-100">
+                <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <div class="w-8 h-8 {{basicTableIconGradient}} rounded-lg flex items-center justify-center text-white text-sm font-bold">
+                        {{basicTableIcon}}
+                    </div>
+                    {{basicTableTitle}}
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-center">
+                        <tbody id="{{basicTableId}}" class="divide-y divide-slate-100">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Yōon Table -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-slate-100">
+                <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <div class="w-8 h-8 {{yoonTableIconGradient}} rounded-lg flex items-center justify-center text-white text-sm font-bold">
+                        {{yoonTableIcon}}
+                    </div>
+                    {{yoonTableTitle}}
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-center">
+                        <tbody id="{{yoonTableId}}" class="divide-y divide-slate-100">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        fetch('{{dataUrl}}')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('{{basicTableId}}');
+                const yoonTableBody = document.getElementById('{{yoonTableId}}');
+
+                {{tableGenerationScript}}
+            })
+            .catch(error => console.error('Error loading data:', error));
+    </script>

@@ -1,0 +1,93 @@
+<!-- Features Section Component -->
+<section class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            {{t:features.title}}
+        </h2>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            {{t:features.subtitle}}
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <!-- Hiragana Card -->
+        <article class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-500 transform hover:-translate-y-3 border border-slate-100 hover:border-indigo-200">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    ひ
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3">{{t:features.hiragana.title}}</h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed mb-6">
+                {{t:features.hiragana.description}}
+            </p>
+            <div class="space-y-2 text-sm text-slate-500">                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                    <span>{{t:features.hiragana.feature1}}</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                    <span>{{t:features.hiragana.feature2}}</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                    <span>{{t:features.hiragana.feature3}}</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Katakana Card -->
+        <article class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-500 transform hover:-translate-y-3 border border-slate-100 hover:border-blue-200">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    カ
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3">{{t:features.katakana.title}}</h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed mb-6">
+                {{t:features.katakana.description}}
+            </p>
+            <div class="space-y-2 text-sm text-slate-500">
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span>{{t:features.katakana.feature1}}</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span>{{t:features.katakana.feature2}}</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span>{{t:features.katakana.feature3}}</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Kanji Levels Card -->
+        <article class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-500 transform hover:-translate-y-3 border border-slate-100 hover:border-purple-200 md:col-span-2 lg:col-span-1">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    漢
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3">{{t:features.kanjiLevels.title}}</h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed mb-6">
+                {{t:features.kanjiLevels.description}}
+            </p>
+            <div class="space-y-2 text-sm text-slate-500">
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    <span>{{t:features.kanjiLevels.feature1}}</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    <span>{{t:features.kanjiLevels.feature2}}</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    <span>{{t:features.kanjiLevels.feature3}}</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

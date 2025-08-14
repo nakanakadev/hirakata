@@ -1,0 +1,277 @@
+<!-- Language Selector Component -->
+<div class="language-selector relative" id="language-selector">
+    <button 
+        class="flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg text-white hover:bg-white/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+        id="language-toggle"
+        aria-label="Seleccionar idioma"
+        aria-expanded="false"
+        aria-haspopup="true">
+        <span id="current-language-flag" class="text-lg">🇪🇸</span>
+        <span id="current-language-name" class="font-medium">Español</span>
+        <svg class="w-4 h-4 transition-transform duration-200" id="language-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    
+    <div 
+        class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-200 py-2 min-w-[200px] opacity-0 invisible transform translate-y-2 transition-all duration-200 z-50"
+        id="language-dropdown"
+        role="menu"
+        aria-labelledby="language-toggle">
+        
+        <!-- Los idiomas se cargarán dinámicamente -->
+        <div id="language-options">
+            <!-- Placeholder para idiomas -->
+        </div>
+    </div>
+</div>
+
+<style>
+.language-selector.open #language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-selector.open #language-arrow {
+    transform: rotate(180deg);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.language-option:hover {
+    background-color: #f3f4f6;
+}
+
+.language-option:focus {
+    outline: none;
+    background-color: #e5e7eb;
+}
+
+.language-option.active {
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.language-option.active .language-check {
+    opacity: 1;
+}
+
+.language-check {
+    opacity: 0;
+    width: 1rem;
+    height: 1rem;
+    color: #2563eb;
+    margin-left: auto;
+}
+</style>
+
+<script>
+// Script para el selector de idioma
+(function() {
+    let initialized = false;
+    
+    function initLanguageSelector() {
+        // Evitar inicialización múltiple
+        if (initialized) {
+            console.log('⚠️ Language selector ya inicializado');
+            return;
+        }
+        
+        const selector = document.getElementById('language-selector');
+        const toggle = document.getElementById('language-toggle');
+        const dropdown = document.getElementById('language-dropdown');
+        const arrow = document.getElementById('language-arrow');
+        const optionsContainer = document.getElementById('language-options');
+        const currentFlag = document.getElementById('current-language-flag');
+        const currentName = document.getElementById('current-language-name');
+
+        if (!selector || !toggle || !dropdown || !optionsContainer) {
+            console.warn('⚠️ Language selector elements not found, retrying...');
+            setTimeout(initLanguageSelector, 100);
+            return;
+        }
+
+        console.log('🌍 Inicializando selector de idiomas...');
+        initialized = true;
+
+        // Configuración de idiomas con banderas
+        const languageFlags = {
+            es: '🇪🇸',
+            en: '🇺🇸',
+            ja: '🇯🇵'
+        };
+
+        // Crear opciones de idioma
+        function createLanguageOptions() {
+            if (!window.i18n) {
+                console.warn('⚠️ window.i18n no disponible para crear opciones');
+                return;
+            }
+            
+            const languages = window.i18n.getAvailableLanguages();
+            optionsContainer.innerHTML = '';
+
+            languages.forEach(lang => {
+                const option = document.createElement('button');
+                option.className = 'language-option';
+                option.setAttribute('role', 'menuitem');
+                option.setAttribute('data-language', lang.code);
+                
+                if (lang.code === window.i18n.currentLanguage) {
+                    option.classList.add('active');
+                }
+
+                option.innerHTML = `
+                    <span class="text-lg">${languageFlags[lang.code] || '🌐'}</span>
+                    <span class="font-medium">${lang.name}</span>
+                    <svg class="language-check w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                `;
+
+                option.addEventListener('click', () => changeLanguage(lang.code));
+                optionsContainer.appendChild(option);
+            });
+            
+            console.log('✅ Opciones de idioma creadas:', languages.length);
+        }
+
+        // Actualizar idioma actual en el botón
+        function updateCurrentLanguage() {
+            if (!window.i18n) {
+                console.warn('⚠️ window.i18n no disponible para actualizar idioma');
+                return;
+            }
+            
+            const currentLang = window.i18n.getCurrentLanguageConfig();
+            currentFlag.textContent = languageFlags[currentLang.code] || '🌐';
+            currentName.textContent = currentLang.name;
+            
+            console.log('🔄 Idioma actual actualizado:', currentLang.name);
+        }        // Cambiar idioma
+        async function changeLanguage(languageCode) {
+            console.log('🔄 Cambiando idioma a:', languageCode);
+            
+            if (!window.i18n) {
+                console.error('❌ window.i18n no disponible');
+                return;
+            }
+            
+            try {
+                await window.i18n.changeLanguage(languageCode);
+                updateCurrentLanguage();
+                createLanguageOptions();
+                closeDropdown();
+                
+                // Actualizar la UI dinámicamente en lugar de recargar la página
+                if (window.updateUI) {
+                    console.log('🔄 Actualizando UI dinámicamente...');
+                    window.updateUI();
+                } else {
+                    console.log('⚠️ updateUI no disponible, recargando página...');
+                    setTimeout(() => {
+                        location.reload();
+                    }, 300);
+                }
+            } catch (error) {
+                console.error('❌ Error cambiando idioma:', error);
+            }
+        }
+
+        // Abrir/cerrar dropdown
+        function toggleDropdown() {
+            selector.classList.toggle('open');
+            const isOpen = selector.classList.contains('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+            console.log('🔽 Dropdown:', isOpen ? 'abierto' : 'cerrado');
+        }
+
+        function closeDropdown() {
+            selector.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Event listeners
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleDropdown();
+        });
+
+        // Cerrar al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!selector.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+
+        // Cerrar con ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && selector.classList.contains('open')) {
+                closeDropdown();
+                toggle.focus();
+            }
+        });
+
+        // Inicializar estado
+        function initializeSelector() {
+            console.log('🎯 Inicializando estado del selector...');
+            
+            if (window.i18n && window.i18n.isReady) {
+                updateCurrentLanguage();
+                createLanguageOptions();
+                console.log('✅ Selector inicializado con i18n listo');
+            } else {
+                console.log('⏳ Esperando a que i18n esté listo...');
+            }
+        }
+
+        // Escuchar eventos de i18n
+        window.addEventListener('i18nReady', () => {
+            console.log('🌍 i18n listo, inicializando selector...');
+            updateCurrentLanguage();
+            createLanguageOptions();
+        });
+
+        window.addEventListener('languageChanged', () => {
+            console.log('🔄 Idioma cambiado, actualizando selector...');
+            updateCurrentLanguage();
+            createLanguageOptions();
+        });
+
+        // Inicializar
+        initializeSelector();
+        
+        console.log('✅ Language selector inicializado completamente');
+    }    // Inicializar cuando el DOM esté listo
+    function startInitialization() {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initLanguageSelector);
+        } else {
+            // DOM ya está listo, intentar inicializar inmediatamente
+            initLanguageSelector();
+        }
+    }
+    
+    // Iniciar el proceso
+    startInitialization();
+    
+    console.log('📝 Script del selector de idiomas cargado');
+})();
+</script>

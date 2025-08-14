@@ -1,0 +1,64 @@
+    <!-- Header -->
+    <header class="{{headerGradient}} shadow-2xl relative overflow-hidden">
+        <!-- Decorative background -->
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+            <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div class="relative z-10">
+            <!-- Top bar with language selector -->
+            <div class="flex justify-end p-4">
+                {{languageSelector}}
+            </div>
+            
+            <!-- Logo Section -->
+            <div class="flex justify-center {{logoPadding}} pb-4">
+                <a href="https://nakanakadev.github.io/hirakata/" 
+                   class="transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-white/30 rounded-xl"
+                   aria-label="{{t:header.ariaLabel}}">
+                    <img class="{{logoSize}} drop-shadow-2xl" alt="{{t:header.logoAlt}}" src="{{logoPath}}hirakata-nobg.png">
+                </a>
+            </div>
+
+            <!-- Title Section -->
+            <div class="text-center {{titlePadding}} px-4">
+                <h1 class="{{titleSize}} font-bold text-white mb-4 drop-shadow-lg {{titleLayout}}">
+                    {{titleIcon}}
+                    {{pageTitle}}
+                </h1>
+                <p class="text-lg md:text-xl {{textColor}} max-w-2xl mx-auto leading-relaxed">
+                    {{subtitle}}
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="bg-black/20 backdrop-blur-sm border-t border-white/20" role="navigation" aria-label="{{t:header.navigationLabel}}">
+                <div class="container mx-auto flex justify-center {{navSpacing}} py-4 px-4">
+                    <a href="{{homeUrl}}"
+                       class="group px-6 py-3 text-white hover:text-indigo-100 transition-all duration-300 text-lg font-semibold rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 border-2 border-transparent hover:border-white/30">
+                        <span class="flex items-center space-x-2">
+                            <span>🏠</span>
+                            <span>{{t:navigation.home}}</span>
+                        </span>
+                    </a>
+                    <a href="{{hiraganaUrl}}"
+                       class="group px-6 py-3 text-white {{hiraganaClass}} transition-all duration-300 text-lg font-semibold rounded-lg {{hiraganaState}}">
+                        <span class="flex items-center space-x-2">
+                            <span>ひ</span>
+                            <span>{{t:navigation.hiragana}}</span>
+                        </span>
+                    </a>
+                    <a href="{{katakanaUrl}}"
+                       class="group px-6 py-3 text-white {{katakanaClass}} transition-all duration-300 text-lg font-semibold rounded-lg {{katakanaState}}">
+                        <span class="flex items-center space-x-2">
+                            <span>カ</span>
+                            <span>{{t:navigation.katakana}}</span>
+                        </span>
+                    </a>
+                    {{extraNavItems}}
+                </div>
+            </nav>
+        </div>
+    </header>
