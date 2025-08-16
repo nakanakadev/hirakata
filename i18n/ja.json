@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "name": "日本語",
+    "code": "ja",
+    "direction": "ltr"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "hiragana": "ひらがな",
+    "katakana": "カタカナ",
+    "practice": "練習",
+    "about": "について",
+    "selectLanguage": "言語を選択"
+  },
+  "loading": {
+    "title": "HiraKataを読み込み中",
+    "subtitle": "モジュラーシステム実行中..."
+  },
+  "header": {
+    "logoAlt": "ひらかたロゴ",
+    "ariaLabel": "HiraKata - メインページ",
+    "navigationLabel": "メインナビゲーション"
+  },
+  "home": {
+    "title": "インタラクティブに日本語を学ぼう",
+    "subtitle": "モジュラーでアクセシブルな学習システムでひらがなとカタカナをマスターしよう",
+    "welcomeMessage": "日本語学習の旅へようこそ！"
+  },
+  "features": {
+    "title": "✨ 主な機能",
+    "subtitle": "日本語の文字体系をマスターするために必要なすべて",
+    "hiragana": {
+      "title": "ひらがな",
+      "description": "完全な表とインタラクティブな練習で日本語の基本的な文字体系を学習しましょう。",
+      "feature1": "71の基本文字と組み合わせ",
+      "feature2": "インタラクティブな練習問題",
+      "feature3": "詳細な発音ガイド"
+    },
+    "katakana": {
+      "title": "カタカナ",
+      "description": "練習ツールで外来語の文字体系をマスターしましょう。",
+      "feature1": "完全な文字セット",
+      "feature2": "外来語に焦点",
+      "feature3": "認識練習"
+    },
+    "kanjiLevels": {
+      "title": "レベル別漢字（近日公開）",
+      "description": "基本から上級まで、難易度ごとに整理された漢字を学びましょう。",
+      "feature1": "JLPTレベルごとの体系的な進行",
+      "feature2": "各漢字グループのインタラクティブな練習問題",
+      "feature3": "進捗管理と個別復習"
+    }
+  },
+  "cta": {
+    "title": "学習の旅を始める準備はできましたか？",
+    "subtitle": "すでに日本語をマスターしている数千人の学生に参加しましょう",
+    "button": {
+      "hiragana": "ひらがなから始める",
+      "katakana": "カタカナから始める"
+    }
+  },
+  "reference": {
+    "title": "📖 参考表",
+    "subtitle": "すべてのひらがなとカタカナ文字への迅速なアクセス",
+    "hiragana": {
+      "title": "ひらがな表",
+      "description": "日本語文字体系の基本文字"
+    },
+    "katakana": {
+      "title": "カタカナ表",
+      "description": "外来語と強調のための文字"
+    }
+  },
+  "footer": {
+    "contact": "連絡先",
+    "github": "ソースコード",
+    "email": "zettaf154@gmail.com",
+    "copyright": "© 2025 HiraKata. 日本語学習への❤️を込めて作成。"
+  },
+  "quiz": {
+    "title": "{{script}}の練習",
+    "score": "スコア: {{score}}/{{total}}",
+    "correct": "正解！",
+    "incorrect": "不正解",
+    "tryAgain": "もう一度",
+    "nextQuestion": "次の問題",
+    "finish": "終了",
+    "question": "この文字の読み方は？",
+    "placeholder": "ローマ字で入力してください",
+    "checkButton": "答えを確認",
+    "helpLabel": "{scriptName}の完全な表を見る",
+    "keepPracticing": "練習を続けよう！",
+    "results": {
+      "title": "お疲れ様でした！",
+      "score": "あなたのスコア: {{score}}/{{total}}",
+      "percentage": "{{percentage}}%正解",
+      "again": "もう一度練習",
+      "continue": "続ける"
+    },
+    "modes": {
+      "normal": "ノーマルモード",
+      "reverse": "リバースモード"
+    },
+    "toggle": {
+      "ariaLabel": "練習モードを切り替え"
+    }
+  },
+  "accessibility": {
+    "screenReader": {
+      "character": "日本語文字",
+      "pronunciation": "発音",
+      "meaning": "意味"
+    }
+  },
+  "errors": {
+    "loadFailed": "コンテンツの読み込みに失敗しました",
+    "networkError": "ネットワークエラー",
+    "tryAgain": "もう一度試す"
+  },
+  "hiragana": {
+    "title": "ひらがなの練習",
+    "subtitle": "インタラクティブな練習でひらがなをマスターしよう",
+    "chartTitle": "完全ひらがな表",
+    "chartSubtitle": "すべての文字の視覚的参考資料",
+    "practiceButton": "練習を始める",
+    "chartButton": "完全な表を見る"
+  },
+  "katakana": {
+    "title": "カタカナの練習",
+    "subtitle": "インタラクティブな練習でカタカナをマスターしよう",
+    "chartTitle": "完全カタカナ表",
+    "chartSubtitle": "すべての文字の視覚的参考資料",
+    "practiceButton": "練習を始める",
+    "chartButton": "完全な表を見る"
+  }
+}

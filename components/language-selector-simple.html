@@ -1,0 +1,46 @@
+<!-- Language Selector Component -->
+<div class="language-selector relative" id="language-selector">    <button 
+        class="flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg text-white hover:bg-white/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+        id="language-toggle"
+        onclick="window.toggleLanguageDropdown()"
+        aria-label="Seleccionar idioma"
+        aria-expanded="false"
+        aria-haspopup="true">
+        <span id="current-language-flag" class="text-lg"></span>
+        <span id="current-language-name" class="font-medium"></span>
+        <svg class="w-4 h-4 transition-transform duration-200" id="language-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    
+    <div 
+        class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-200 py-2 min-w-[200px] z-50"
+        id="language-dropdown"
+        style="display: none;"
+        role="menu"
+        aria-labelledby="language-toggle">
+          <button class="language-option w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-left" onclick="window.changeLanguage('es')">
+            <span class="text-lg">🇪🇸</span>
+            <span class="font-medium text-gray-700">Español</span>
+            <svg class="w-4 h-4 ml-auto text-blue-600 opacity-0" fill="currentColor" viewBox="0 0 20 20" id="check-es">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+        
+        <button class="language-option w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-left" onclick="window.changeLanguage('en')">
+            <span class="text-lg">🇺🇸</span>
+            <span class="font-medium text-gray-700">English</span>
+            <svg class="w-4 h-4 ml-auto text-blue-600 opacity-0" fill="currentColor" viewBox="0 0 20 20" id="check-en">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+        
+        <button class="language-option w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 text-left" onclick="window.changeLanguage('ja')">
+            <span class="text-lg">🇯🇵</span>
+            <span class="font-medium text-gray-700">日本語</span>
+            <svg class="w-4 h-4 ml-auto text-blue-600 opacity-0" fill="currentColor" viewBox="0 0 20 20" id="check-ja">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+    </div>
+</div>

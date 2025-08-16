@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "name": "Español",
+    "code": "es",
+    "direction": "ltr"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "hiragana": "Hiragana",
+    "katakana": "Katakana",
+    "practice": "Práctica",
+    "about": "Acerca de",
+    "selectLanguage": "Seleccionar idioma"
+  },
+  "loading": {
+    "title": "Cargando HiraKata",
+    "subtitle": "Sistema modular en acción..."
+  },
+  "header": {
+    "logoAlt": "Logo Hirakata",
+    "ariaLabel": "HiraKata - Página principal",
+    "navigationLabel": "Navegación principal"
+  },
+  "home": {
+    "title": "Aprende Japonés de Forma Interactiva",
+    "subtitle": "Domina Hiragana y Katakana con nuestro sistema de aprendizaje modular y accesible",
+    "welcomeMessage": "¡Bienvenido a tu viaje de aprendizaje del japonés!"
+  },
+  "features": {
+    "title": "✨ Características Principales",
+    "subtitle": "Todo lo que necesitas para dominar el sistema de escritura japonés",
+    "hiragana": {
+      "title": "Hiragana",
+      "description": "Aprende el sistema de escritura fundamental del japonés con tablas completas y ejercicios interactivos.",
+      "feature1": "71 caracteres básicos y combinaciones",
+      "feature2": "Ejercicios de práctica interactivos",
+      "feature3": "Guías de pronunciación detalladas"
+    },
+    "katakana": {
+      "title": "Katakana",
+      "description": "Domina el sistema de escritura para palabras extranjeras con nuestras herramientas de práctica.",
+      "feature1": "Conjunto completo de caracteres",
+      "feature2": "Enfoque en palabras prestadas",
+      "feature3": "Ejercicios de reconocimiento"
+    },
+    "kanjiLevels": {
+      "title": "Kanjis por Niveles (Próximamente)",
+      "description": "Aprende kanjis organizados por niveles de dificultad, desde los más básicos hasta los más avanzados.",
+      "feature1": "Progresión estructurada por niveles JLPT",
+      "feature2": "Ejercicios interactivos para cada grupo de kanjis",
+      "feature3": "Seguimiento de avance y repaso personalizado"
+    }
+  },
+  "cta": {
+    "title": "¿Listo para comenzar tu viaje de aprendizaje?",
+    "subtitle": "Únete a miles de estudiantes que ya están dominando el japonés",
+    "button": {
+      "hiragana": "Comenzar con Hiragana",
+      "katakana": "Comenzar con Katakana"
+    }
+  },
+  "reference": {
+    "title": "📖 Tablas de Referencia",
+    "subtitle": "Acceso rápido a todos los caracteres Hiragana y Katakana",
+    "hiragana": {
+      "title": "Tabla de Hiragana",
+      "description": "Caracteres básicos del sistema de escritura japonés"
+    },
+    "katakana": {
+      "title": "Tabla de Katakana",
+      "description": "Caracteres para palabras extranjeras y énfasis"
+    }
+  },
+  "footer": {
+    "contact": "Contacto",
+    "email": "zettaf154@gmail.com",
+    "copyright": "© 2025 HiraKata. Hecho con ❤️ para el aprendizaje del japonés."
+  },
+  "quiz": {
+    "title": "Práctica de {{script}}",
+    "score": "Puntuación: {{score}}/{{total}}",
+    "correct": "¡Correcto!",
+    "incorrect": "Incorrecto",
+    "tryAgain": "Intentar de nuevo",
+    "nextQuestion": "Siguiente pregunta",
+    "finish": "Finalizar",
+    "question": "¿Cómo se lee este carácter?",
+    "placeholder": "Escribe la romanización",
+    "checkButton": "Verificar Respuesta",
+    "helpLabel": "Ver tabla completa de {scriptName}",
+    "keepPracticing": "¡Sigue practicando!",
+    "results": {
+      "title": "¡Excelente trabajo!",
+      "score": "Tu puntuación: {{score}}/{{total}}",
+      "percentage": "{{percentage}}% correcto",
+      "again": "Practicar de nuevo",
+      "continue": "Continuar"
+    },
+    "modes": {
+      "normal": "Modo Normal",
+      "reverse": "Modo Inverso"
+    },
+    "toggle": {
+      "ariaLabel": "Cambiar modo de práctica"
+    }
+  },
+  "accessibility": {
+    "screenReader": {
+      "character": "Carácter japonés",
+      "pronunciation": "Pronunciación",
+      "meaning": "Significado"
+    }
+  },
+  "errors": {
+    "loadFailed": "Error al cargar el contenido",
+    "networkError": "Error de conexión",
+    "tryAgain": "Intentar de nuevo"
+  },
+  "hiragana": {
+    "title": "Práctica de Hiragana",
+    "subtitle": "Domina el silabario Hiragana con ejercicios interactivos",
+    "chartTitle": "Tabla Completa de Hiragana",
+    "chartSubtitle": "Referencia visual de todos los caracteres del silabario",
+    "practiceButton": "Empezar Práctica",
+    "chartButton": "Ver Tabla Completa"
+  },
+  "katakana": {
+    "title": "Práctica de Katakana",
+    "subtitle": "Domina el silabario Katakana con ejercicios interactivos",
+    "chartTitle": "Tabla Completa de Katakana",
+    "chartSubtitle": "Referencia visual de todos los caracteres del silabario",
+    "practiceButton": "Empezar Práctica",
+    "chartButton": "Ver Tabla Completa"
+  }
+}
