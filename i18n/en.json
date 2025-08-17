@@ -94,9 +94,18 @@
     "finish": "Finish",
     "question": "How do you read this character?",
     "placeholder": "Type the romanization",
+    "placeholderReverse": "Type the Japanese character",
     "checkButton": "Check Answer",
     "helpLabel": "View complete {scriptName} chart",
     "keepPracticing": "Keep practicing!",
+    "popup": {
+      "correctionLabel": "Correct answer:"
+    },
+    "feedback": {
+      "correct": "Correct answer! You're improving your Japanese.",
+      "try": "Keep trying!",
+      "incorrectMessage": "Don't worry, practice makes perfect."
+    },
     "results": {
       "title": "Great job!",
       "score": "Your score: {{score}}/{{total}}",
@@ -129,6 +138,8 @@
     "subtitle": "Master the Hiragana syllabary with interactive exercises",
     "chartTitle": "Complete Hiragana Chart",
     "chartSubtitle": "Visual reference for all syllabary characters",
+    "basicTitle": "Basic Hiragana (Gojūon)",
+    "compoundTitle": "Compound Hiragana (Yōon)",
     "practiceButton": "Start Practice",
     "chartButton": "View Complete Chart"
   },
