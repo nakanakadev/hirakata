@@ -2,14 +2,16 @@
   "name": "hirakata",
   "version": "1.0.0",
   "description": "Aplicación para aprender Hiragana y Katakana",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:css:prod",
     "build:css": "tailwindcss -i ./src/styles.css -o ./styles.css --watch",
     "build:css:prod": "tailwindcss -i ./src/styles.css -o ./styles.css --minify",
     "serve": "python -m http.server 8000",
-    "dev": "echo 'Inicia Tailwind CSS en otra terminal con: npm run build:css' && python -m http.server 8000"
+    "dev": "npm-run-all --parallel build:css:start start",
+    "build:css:start": "tailwindcss -i ./src/styles.css -o ./styles.css --watch"
   },
   "keywords": ["japonés", "hiragana", "katakana", "aprendizaje"],
   "author": "nakanakadev",
@@ -17,6 +19,10 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
