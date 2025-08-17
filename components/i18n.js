@@ -168,6 +168,10 @@ class I18nManager {
                 });
             }
         } catch(_) { /* ignore */ }
+        // Reemplazar tokens de plantilla {{t:clave}} en HTML inyectado (footer, componentes estáticos)
+        try {
+            this.processTemplateTokens();
+        } catch(_) { /* ignore */ }
         // Actualiza enlaces de navegación para mantener ?lang
         try {
             const anchors = document.querySelectorAll('a[href]');
@@ -181,6 +185,23 @@ class I18nManager {
         if (window.HIRAKATA_CONFIG) {
             window.HIRAKATA_CONFIG.CURRENT_LANGUAGE = this.currentLanguage;
         }
+    }
+    processTemplateTokens(root=document) {
+        if(!root) return;
+        const walker = (el) => {
+            // Solo procesar elementos que contienen el patrón para minimizar trabajo
+            if(el.innerHTML && el.innerHTML.includes('{{t:')){
+                el.innerHTML = el.innerHTML.replace(/\{\{t:([^}]+)\}\}/g, (m,k)=>{
+                    const key = k.trim();
+                    return this.t(key) || `[${key}]`;
+                });
+            }
+            // No descender si no hay hijos significativos
+            if(el.children && el.children.length){
+                Array.from(el.children).forEach(child=>walker(child));
+            }
+        };
+        walker(root.body ? root.body : root);
     }
     ensureLangParamInUrl() {
         try {

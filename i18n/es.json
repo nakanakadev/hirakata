@@ -76,6 +76,11 @@
     "katakana": {
       "title": "Tabla de Katakana",
       "description": "Caracteres para palabras extranjeras y énfasis"
+  },
+    "tags": {
+      "basic": "Gojūon básico",
+      "dakuten": "Dakuten & Handakuten",
+      "yoon": "Yōon"
     }
   },
   "footer": {
