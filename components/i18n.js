@@ -18,6 +18,8 @@ class I18nManager {
         this.currentLanguage = this.detectLanguage();
         await this.loadLanguage(this.currentLanguage);
         this.applyLanguage();
+    // Asegura que la URL actual tenga ?lang= para persistencia entre F5 y compartir enlaces
+    this.ensureLangParamInUrl();
         this.isReady = true;
         if (typeof window !== 'undefined') {
             window.dispatchEvent(new CustomEvent('i18nReady', {
@@ -26,22 +28,68 @@ class I18nManager {
         }
     }
     detectLanguage() {
+        // 1. Query param ?lang=
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const qpLang = params.get('lang');
+            if (qpLang && this.availableLanguages.includes(qpLang)) {
+                localStorage.setItem('hirakata-language', qpLang);
+                return qpLang;
+            }
+        } catch(_) { /* ignore */ }
+        // 2. LocalStorage
         const savedLanguage = localStorage.getItem('hirakata-language');
         if (savedLanguage && this.availableLanguages.includes(savedLanguage)) {
             return savedLanguage;
         }
-        const browserLanguage = navigator.language.split('-')[0];
-        if (this.availableLanguages.includes(browserLanguage)) {
-            return browserLanguage;
-        }
+        // 3. Browser
+        try {
+            const browserLanguage = navigator.language.split('-')[0];
+            if (this.availableLanguages.includes(browserLanguage)) {
+                return browserLanguage;
+            }
+        } catch(_) { /* ignore */ }
+        // 4. Default
         return this.currentLanguage;
+    }
+    getLanguageFileUrl(language) {
+        try {
+            const rawPath = window.location.pathname || '/';
+            // Normaliza removiendo index.html
+            const path = rawPath.replace(/index\.html$/i, '');
+            // Partes no vacías
+            const parts = path.split('/').filter(Boolean);
+            // Detecta si primer segmento es el nombre del repo (GitHub Pages) para no contar ese salto
+            const REPO_NAME = 'hirakata';
+            let hops;
+            if (parts.length === 0) {
+                hops = 0; // raíz
+            } else if (parts[0] === REPO_NAME) {
+                // Ignora segmento base (repo)
+                hops = parts.length - 1;
+            } else {
+                hops = parts.length; // servidor local sin prefijo
+            }
+            const prefix = hops > 0 ? '../'.repeat(hops) : './';
+            return `${prefix}i18n/${language}.json`;
+        } catch (_) {
+            return `./i18n/${language}.json`;
+        }
     }
     async loadLanguage(language) {
         try {
-            const url = `./i18n/${language}.json`;
+            const url = this.getLanguageFileUrl(language);
             const response = await fetch(url, { cache: 'no-cache' });
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                // Reintento con ruta absoluta desde raíz
+                const altUrl = `/i18n/${language}.json`;
+                const altResp = await fetch(altUrl, { cache: 'no-cache' });
+                if (!altResp.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} & alt ${altResp.status}`);
+                }
+                const altJson = await altResp.json();
+                this.translations[language] = altJson;
+                return;
             }
             const jsonData = await response.json();
             this.translations[language] = jsonData;
@@ -75,6 +123,7 @@ class I18nManager {
             await this.loadLanguage(language);
         }
         this.applyLanguage();
+    this.ensureLangParamInUrl();
         window.dispatchEvent(new CustomEvent('languageChanged', {
             detail: { language, config: this.languageConfig[language] }
         }));
@@ -106,9 +155,44 @@ class I18nManager {
         document.documentElement.lang = this.currentLanguage;
         document.documentElement.dir = currentConfig.direction;
         this.updateMetaTags();
+        // Traducir inmediatamente nodos con data-i18n si existe función t
+        try {
+            if (this.translations[this.currentLanguage]) {
+                const nodes = document.querySelectorAll('[data-i18n]');
+                nodes.forEach(node => {
+                    const key = node.getAttribute('data-i18n');
+                    if (key) {
+                        const txt = this.t(key);
+                        if (txt && typeof txt === 'string') node.textContent = txt;
+                    }
+                });
+            }
+        } catch(_) { /* ignore */ }
+        // Actualiza enlaces de navegación para mantener ?lang
+        try {
+            const anchors = document.querySelectorAll('a[href]');
+            anchors.forEach(a => {
+                if (/^(https?:|mailto:|#)/i.test(a.getAttribute('href'))) return; // ignora externos y anchors
+                const url = new URL(a.getAttribute('href'), window.location.href);
+                url.searchParams.set('lang', this.currentLanguage);
+                a.setAttribute('href', url.pathname.replace(/\/index\.html$/, '/') + (url.search ? url.search : ''));
+            });
+        } catch(_) { /* ignore */ }
         if (window.HIRAKATA_CONFIG) {
             window.HIRAKATA_CONFIG.CURRENT_LANGUAGE = this.currentLanguage;
         }
+    }
+    ensureLangParamInUrl() {
+        try {
+            if (typeof window === 'undefined') return;
+            const url = new URL(window.location.href);
+            const current = url.searchParams.get('lang');
+            if (current !== this.currentLanguage) {
+                url.searchParams.set('lang', this.currentLanguage);
+                // Mantiene historial limpio (no añade nueva entrada)
+                window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+            }
+        } catch(_) { /* ignore */ }
     }
     updateMetaTags() {
         let langMeta = document.querySelector('meta[name="language"]');

@@ -43,6 +43,13 @@
       "feature2": "外来語に焦点",
       "feature3": "認識練習"
     },
+    "quiz": {
+      "title": "スマート練習",
+      "description": "あなたの学習レベルに合わせて調整される適応型クイズシステム。",
+      "feature1": "間隔反復アルゴリズム",
+      "feature2": "進捗追跡",
+      "feature3": "個別練習モード"
+    },
     "kanjiLevels": {
       "title": "レベル別漢字（近日公開）",
       "description": "基本から上級まで、難易度ごとに整理された漢字を学びましょう。",
@@ -87,9 +94,18 @@
     "finish": "終了",
     "question": "この文字の読み方は？",
     "placeholder": "ローマ字で入力してください",
+    "placeholderReverse": "日本語の文字を入力してください",
     "checkButton": "答えを確認",
     "helpLabel": "{scriptName}の完全な表を見る",
     "keepPracticing": "練習を続けよう！",
+    "popup": {
+      "correctionLabel": "正しい答え:"
+    },
+    "feedback": {
+      "correct": "正解です！日本語力が向上しています。",
+      "try": "頑張って！",
+      "incorrectMessage": "心配しないで、継続は力なり。"
+    },
     "results": {
       "title": "お疲れ様でした！",
       "score": "あなたのスコア: {{score}}/{{total}}",
@@ -122,6 +138,8 @@
     "subtitle": "インタラクティブな練習でひらがなをマスターしよう",
     "chartTitle": "完全ひらがな表",
     "chartSubtitle": "すべての文字の視覚的参考資料",
+    "basicTitle": "基本ひらがな（五十音）",
+    "compoundTitle": "拗音（ようおん）ひらがな",
     "practiceButton": "練習を始める",
     "chartButton": "完全な表を見る"
   },
