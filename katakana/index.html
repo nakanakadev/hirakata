@@ -207,26 +207,19 @@
         </script>
         <script src="script.js"></script>
     
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-12 mt-20" role="contentinfo">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center">
-                <div class="mb-6">
-                    <img class="h-12 mx-auto opacity-80" alt="Logo Hirakata" src="../hirakata-nobg.png">
-                </div>
-                <p class="text-lg mb-4">
-                    © 2025 HiraKata. Desarrollado con 
-                    <span class="text-red-400 text-xl" aria-label="amor">❤️</span> por 
-                    <a href="https://github.com/nakanakadev/" target="_blank" rel="noopener noreferrer"
-                       class="text-red-400 hover:text-red-300 transition-colors duration-300 underline decoration-2 underline-offset-4 hover:decoration-red-300 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded">
-                        nakanakadev
-                    </a>
-                </p>
-                <p class="text-slate-500 text-sm">
-                    Hecho para estudiantes de japonés, por estudiantes de japonés.
-                </p>
-            </div>
-        </div>
-    </footer>
+            <div id="dynamic-footer" data-template=""></div>
+            <script>
+                (function initDynamicFooter(){
+                    const container = document.getElementById('dynamic-footer'); if(!container) return;
+                    function render(){
+                        const tpl=container.dataset.template; if(!tpl) return;
+                        const logoProcessed = tpl.replace(/\{\{logoPath\}\}/g,'../');
+                        container.innerHTML = logoProcessed.replace(/\{\{t:([^}]+)\}\}/g,(m,key)=> (window.t?window.t(key.trim()): key.trim()));
+                    }
+                    fetch('../components/footer.html').then(r=>r.text()).then(html=>{ container.dataset.template=html; render(); });
+                    window.addEventListener('i18nReady', render);
+                    window.addEventListener('languageChanged', render);
+                })();
+            </script>
 </body>
 </html>

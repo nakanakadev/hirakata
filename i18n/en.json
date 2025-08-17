@@ -76,6 +76,11 @@
     "katakana": {
       "title": "Katakana Table",
       "description": "Characters for foreign words and emphasis"
+  },
+    "tags": {
+      "basic": "Basic Gojūon",
+      "dakuten": "Dakuten & Handakuten",
+      "yoon": "Yōon"
     }
   },
   "footer": {
