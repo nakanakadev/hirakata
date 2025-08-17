@@ -76,6 +76,11 @@
     "katakana": {
       "title": "カタカナ表",
       "description": "外来語と強調のための文字"
+  },
+    "tags": {
+      "basic": "基本五十音",
+      "dakuten": "濁点・半濁点",
+      "yoon": "拗音"
     }
   },
   "footer": {
