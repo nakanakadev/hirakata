@@ -148,6 +148,8 @@
     "subtitle": "Master the Katakana syllabary with interactive exercises",
     "chartTitle": "Complete Katakana Chart",
     "chartSubtitle": "Visual reference for all syllabary characters",
+  "basicTitle": "Basic Katakana (Gojūon)",
+  "compoundTitle": "Compound Katakana (Yōon)",
     "practiceButton": "Start Practice",
     "chartButton": "View Complete Chart"
   }
