@@ -148,6 +148,8 @@
     "subtitle": "インタラクティブな練習でカタカナをマスターしよう",
     "chartTitle": "完全カタカナ表",
     "chartSubtitle": "すべての文字の視覚的参考資料",
+  "basicTitle": "基本カタカナ（五十音）",
+  "compoundTitle": "拗音（ようおん）カタカナ",
     "practiceButton": "練習を始める",
     "chartButton": "完全な表を見る"
   }
