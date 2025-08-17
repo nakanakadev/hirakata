@@ -28,7 +28,7 @@ function updateUI() {
     if (isReverseMode) {
         // Modo Reverse: Mostrar la romanización y pedir el carácter
         characterElement.textContent = currentRomanization;
-        answerInput.placeholder = "Escribe el carácter en japonés";
+        answerInput.placeholder = (window.t ? window.t('quiz.placeholderReverse','') : 'Escribe el carácter en japonés');
         
         // Destacar modo activo: A está activo (romano → japonés)
         if (toggleSpans.length >= 3) {
@@ -40,7 +40,7 @@ function updateUI() {
     } else {
         // Modo Normal: Mostrar el carácter y pedir la romanización
         characterElement.textContent = currentCharacter;
-        answerInput.placeholder = "Escribe la romanización";
+        answerInput.placeholder = (window.t ? window.t('quiz.placeholder','') : 'Escribe la romanización');
         
         // Destacar modo activo: ア está activo (japonés → romano)
         if (toggleSpans.length >= 3) {
@@ -76,9 +76,9 @@ function showPopup(isCorrect, userAnswer = '', correctAnswer = '', character = '
         icon.classList.add('correct');
         title.classList.add('correct');
         
-        emoji.textContent = '🎉';
-        title.textContent = '¡Excelente!';
-        message.textContent = '¡Respuesta correcta! Sigues mejorando tu japonés.';
+    emoji.textContent = '🎉';
+    title.textContent = window.t ? window.t('quiz.results.title') : '¡Excelente!';
+    message.textContent = window.t ? window.t('quiz.feedback.correct') : '¡Respuesta correcta! Sigues mejorando tu japonés.';
         
         // Mostrar estrellas brillantes
         stars.style.display = 'block';
@@ -94,9 +94,9 @@ function showPopup(isCorrect, userAnswer = '', correctAnswer = '', character = '
         icon.classList.add('incorrect');
         title.classList.add('incorrect');
         
-        emoji.textContent = '💪';
-        title.textContent = '¡Sigue intentando!';
-        message.textContent = 'No te preocupes, la práctica hace al maestro.';
+    emoji.textContent = '💪';
+    title.textContent = window.t ? window.t('quiz.feedback.try') : '¡Sigue intentando!';
+    message.textContent = window.t ? window.t('quiz.feedback.incorrectMessage') : 'No te preocupes, la práctica hace al maestro.';
         
         // Mostrar corrección
         correction.style.display = 'block';

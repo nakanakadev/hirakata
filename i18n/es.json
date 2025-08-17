@@ -148,6 +148,8 @@
     "subtitle": "Domina el silabario Katakana con ejercicios interactivos",
     "chartTitle": "Tabla Completa de Katakana",
     "chartSubtitle": "Referencia visual de todos los caracteres del silabario",
+  "basicTitle": "Katakana Básico (Gojūon)",
+  "compoundTitle": "Katakana Compuesto (Yōon)",
     "practiceButton": "Empezar Práctica",
     "chartButton": "Ver Tabla Completa"
   }
