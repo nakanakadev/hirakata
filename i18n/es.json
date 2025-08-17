@@ -43,6 +43,13 @@
       "feature2": "Enfoque en palabras prestadas",
       "feature3": "Ejercicios de reconocimiento"
     },
+    "quiz": {
+      "title": "Práctica Inteligente",
+      "description": "Sistema de cuestionario adaptativo que se ajusta a tu nivel de aprendizaje.",
+      "feature1": "Algoritmo de repetición espaciada",
+      "feature2": "Seguimiento del progreso",
+      "feature3": "Modo de práctica personalizado"
+    },
     "kanjiLevels": {
       "title": "Kanjis por Niveles (Próximamente)",
       "description": "Aprende kanjis organizados por niveles de dificultad, desde los más básicos hasta los más avanzados.",
@@ -73,6 +80,7 @@
   },
   "footer": {
     "contact": "Contacto",
+    "github": "Código fuente",
     "email": "zettaf154@gmail.com",
     "copyright": "© 2025 HiraKata. Hecho con ❤️ para el aprendizaje del japonés."
   },
@@ -86,9 +94,18 @@
     "finish": "Finalizar",
     "question": "¿Cómo se lee este carácter?",
     "placeholder": "Escribe la romanización",
+    "placeholderReverse": "Escribe el carácter en japonés",
     "checkButton": "Verificar Respuesta",
     "helpLabel": "Ver tabla completa de {scriptName}",
     "keepPracticing": "¡Sigue practicando!",
+    "popup": {
+      "correctionLabel": "Respuesta correcta:"
+    },
+    "feedback": {
+      "correct": "¡Respuesta correcta! Sigues mejorando tu japonés.",
+      "try": "¡Sigue intentando!",
+      "incorrectMessage": "No te preocupes, la práctica hace al maestro."
+    },
     "results": {
       "title": "¡Excelente trabajo!",
       "score": "Tu puntuación: {{score}}/{{total}}",
@@ -121,6 +138,8 @@
     "subtitle": "Domina el silabario Hiragana con ejercicios interactivos",
     "chartTitle": "Tabla Completa de Hiragana",
     "chartSubtitle": "Referencia visual de todos los caracteres del silabario",
+    "basicTitle": "Hiragana Básico (Gojūon)",
+    "compoundTitle": "Hiragana Compuesto (Yōon)",
     "practiceButton": "Empezar Práctica",
     "chartButton": "Ver Tabla Completa"
   },
