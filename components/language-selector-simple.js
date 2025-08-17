@@ -27,32 +27,38 @@ window.toggleLanguageDropdown = function() {
 };
 
 window.changeLanguage = async function(langCode) {
-    if (!languages[langCode]) {
-        return;
-    }
-    
+    if (!languages[langCode]) return;
     localStorage.setItem('hirakata-language', langCode);
-    
     currentLanguage = langCode;
-    
     updateSelectorUI(langCode);
-    
     window.toggleLanguageDropdown();
-    
+
+    const forceReload = document.body && document.body.getAttribute('data-reload-on-lang') === 'true';
+    if (forceReload) {
+        // Construye URL con ?lang= nuevo y recarga completa para reinstanciar lógica del quiz
+        try {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', langCode);
+            window.location.replace(url.pathname + url.search + url.hash);
+        } catch(_) {
+            window.location.reload();
+        }
+        return; // no continuar con modo dinámico
+    }
+
     if (window.i18n && window.i18n.changeLanguage) {
         try {
             await window.i18n.changeLanguage(langCode);
-            
             if (window.updateUI) {
                 window.updateUI();
             } else {
-                setTimeout(() => location.reload(), 300);
+                setTimeout(() => location.reload(), 200);
             }
         } catch (error) {
-            setTimeout(() => location.reload(), 300);
+            setTimeout(() => location.reload(), 200);
         }
     } else {
-        setTimeout(() => location.reload(), 300);
+        setTimeout(() => location.reload(), 200);
     }
 };
 
