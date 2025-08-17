@@ -138,6 +138,8 @@
     "subtitle": "Master the Hiragana syllabary with interactive exercises",
     "chartTitle": "Complete Hiragana Chart",
     "chartSubtitle": "Visual reference for all syllabary characters",
+    "basicTitle": "Basic Hiragana (Gojūon)",
+    "compoundTitle": "Compound Hiragana (Yōon)",
     "practiceButton": "Start Practice",
     "chartButton": "View Complete Chart"
   },

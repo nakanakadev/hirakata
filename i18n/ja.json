@@ -138,6 +138,8 @@
     "subtitle": "インタラクティブな練習でひらがなをマスターしよう",
     "chartTitle": "完全ひらがな表",
     "chartSubtitle": "すべての文字の視覚的参考資料",
+    "basicTitle": "基本ひらがな（五十音）",
+    "compoundTitle": "拗音（ようおん）ひらがな",
     "practiceButton": "練習を始める",
     "chartButton": "完全な表を見る"
   },
