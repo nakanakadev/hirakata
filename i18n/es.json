@@ -8,6 +8,7 @@
     "home": "Inicio",
     "hiragana": "Hiragana",
     "katakana": "Katakana",
+    "kanji": "Kanji",
     "practice": "Práctica",
     "about": "Acerca de",
     "selectLanguage": "Seleccionar idioma"
@@ -157,5 +158,40 @@
   "compoundTitle": "Katakana Compuesto (Yōon)",
     "practiceButton": "Empezar Práctica",
     "chartButton": "Ver Tabla Completa"
+  },
+  "kanji": {
+    "mainTitle": "Niveles de Kanji JLPT",
+    "mainSubtitle": "Explora los Kanji por niveles de dominio JLPT",
+    "comingSoon": "Próximamente",
+    "n5": {
+      "title": "Práctica de Kanji N5",
+      "subtitle": "Aprende los Kanji del N5",
+      "chartTitle": "Tabla de Kanjis N5",
+      "cardTitle": "JLPT N5",
+      "cardDescription": "Los kanjis más básicos, esenciales para principiantes.",
+      "count": "~100 Kanjis"
+    },
+    "n4": {
+      "cardTitle": "JLPT N4",
+      "cardDescription": "Ampliando tu vocabulario con kanjis de uso diario."
+    },
+    "n3": {
+      "cardTitle": "JLPT N3",
+      "cardDescription": "Kanjis intermedios para una comprensión más profunda."
+    },
+    "n2": {
+      "cardTitle": "JLPT N2",
+      "cardDescription": "Dominando kanjis avanzados para lectura de textos complejos."
+    },
+    "n1": {
+      "cardTitle": "JLPT N1",
+      "cardDescription": "El nivel más alto, para una fluidez casi nativa."
+    },
+    "table": {
+        "kanji": "Kanji",
+        "meaning": "Significado",
+        "onyomi": "On'yomi",
+        "kunyomi": "Kun'yomi"
+    }
   }
 }
