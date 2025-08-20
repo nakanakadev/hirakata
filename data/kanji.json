@@ -1,0 +1,484 @@
+{
+  "n5": [
+    {
+      "kanji": "日",
+      "meaning": "day, sun, Japan, counter for days",
+      "onyomi": "nichi, jitsu",
+      "kunyomi": "hi, -bi, -ka"
+    },
+    {
+      "kanji": "一",
+      "meaning": "one",
+      "onyomi": "ichi",
+      "kunyomi": "hito(tsu)"
+    },
+    {
+      "kanji": "国",
+      "meaning": "country",
+      "onyomi": "koku",
+      "kunyomi": "kuni"
+    },
+    {
+      "kanji": "人",
+      "meaning": "person",
+      "onyomi": "jin, nin",
+      "kunyomi": "hito"
+    },
+    {
+      "kanji": "年",
+      "meaning": "year, counter for years",
+      "onyomi": "nen",
+      "kunyomi": "toshi"
+    },
+    {
+      "kanji": "大",
+      "meaning": "large, big",
+      "onyomi": "dai, tai",
+      "kunyomi": "oo(kii)"
+    },
+    {
+      "kanji": "十",
+      "meaning": "ten, 10",
+      "onyomi": "juu",
+      "kunyomi": "tou, to"
+    },
+    {
+      "kanji": "二",
+      "meaning": "two, 2",
+      "onyomi": "ni, ji",
+      "kunyomi": "futa(tsu)"
+    },
+    {
+      "kanji": "本",
+      "meaning": "book, present, true, counter for long cylindrical things",
+      "onyomi": "hon",
+      "kunyomi": "moto"
+    },
+    {
+      "kanji": "中",
+      "meaning": "in, inside, middle, mean, center",
+      "onyomi": "chuu",
+      "kunyomi": "naka, uchi, ata(ru)"
+    },
+    {
+      "kanji": "長",
+      "meaning": "long, leader, superior, senior",
+      "onyomi": "chou",
+      "kunyomi": "naga(i), osa"
+    },
+    {
+      "kanji": "出",
+      "meaning": "exit, leave, go out",
+      "onyomi": "shutsu, sui",
+      "kunyomi": "de(ru), da(su), i(deru)"
+    },
+    {
+      "kanji": "三",
+      "meaning": "three, 3",
+      "onyomi": "san",
+      "kunyomi": "mi(tsu)"
+    },
+    {
+      "kanji": "時",
+      "meaning": "time, hour",
+      "onyomi": "ji",
+      "kunyomi": "toki, doki"
+    },
+    {
+      "kanji": "行",
+      "meaning": "going, journey, carry out, line, row",
+      "onyomi": "kou, gyou, an",
+      "kunyomi": "i(ku), yu(ku), okona(u)"
+    },
+    {
+      "kanji": "見",
+      "meaning": "see, hopes, chances, idea, opinion, look at, visible",
+      "onyomi": "ken",
+      "kunyomi": "mi(ru), mi(seru)"
+    },
+    {
+      "kanji": "月",
+      "meaning": "month, moon",
+      "onyomi": "getsu, gatsu",
+      "kunyomi": "tsuki"
+    },
+    {
+      "kanji": "分",
+      "meaning": "part, minute of time, understand",
+      "onyomi": "bun, fun, bu",
+      "kunyomi": "wa(keru)"
+    },
+    {
+      "kanji": "後",
+      "meaning": "behind, back, later",
+      "onyomi": "go, kou",
+      "kunyomi": "nochi, ushi(ro), ato"
+    },
+    {
+      "kanji": "前",
+      "meaning": "in front, before",
+      "onyomi": "zen",
+      "kunyomi": "mae"
+    },
+    {
+      "kanji": "生",
+      "meaning": "life, genuine, birth",
+      "onyomi": "sei, shou",
+      "kunyomi": "i(kiru), u(mu), o(u), ha(eru), nama"
+    },
+    {
+      "kanji": "五",
+      "meaning": "five, 5",
+      "onyomi": "go",
+      "kunyomi": "itsu(tsu)"
+    },
+    {
+      "kanji": "間",
+      "meaning": "interval, space",
+      "onyomi": "kan, ken",
+      "kunyomi": "aida, ma, ai"
+    },
+    {
+      "kanji": "上",
+      "meaning": "above, up",
+      "onyomi": "jou, shou, shan",
+      "kunyomi": "ue, uwa, kami, a(geru), nobo(ru), tatematsu(ru)"
+    },
+    {
+      "kanji": "東",
+      "meaning": "east",
+      "onyomi": "tou",
+      "kunyomi": "higashi"
+    },
+    {
+      "kanji": "四",
+      "meaning": "four, 4",
+      "onyomi": "shi",
+      "kunyomi": "yo(tsu), yon"
+    },
+    {
+      "kanji": "今",
+      "meaning": "now; the present",
+      "onyomi": "kon, kin",
+      "kunyomi": "ima"
+    },
+    {
+      "kanji": "金",
+      "meaning": "gold",
+      "onyomi": "kin, kon, gon",
+      "kunyomi": "kane, kana, gane"
+    },
+    {
+      "kanji": "九",
+      "meaning": "nine, 9",
+      "onyomi": "kyuu, ku",
+      "kunyomi": "kokono(tsu)"
+    },
+    {
+      "kanji": "入",
+      "meaning": "enter, insert",
+      "onyomi": "nyuu",
+      "kunyomi": "i(ru), hai(ru)"
+    },
+    {
+      "kanji": "学",
+      "meaning": "study, learning, science",
+      "onyomi": "gaku",
+      "kunyomi": "mana(bu)"
+    },
+    {
+      "kanji": "高",
+      "meaning": "tall, high, expensive",
+      "onyomi": "kou",
+      "kunyomi": "taka(i)"
+    },
+    {
+      "kanji": "円",
+      "meaning": "circle, yen, round",
+      "onyomi": "en",
+      "kunyomi": "maru(i)"
+    },
+    {
+      "kanji": "子",
+      "meaning": "child",
+      "onyomi": "shi, su, tsu",
+      "kunyomi": "ko, ne"
+    },
+    {
+      "kanji": "外",
+      "meaning": "outside",
+      "onyomi": "gai, ge",
+      "kunyomi": "soto, hoka, hazu-, to-"
+    },
+    {
+      "kanji": "八",
+      "meaning": "eight, 8",
+      "onyomi": "hachi",
+      "kunyomi": "ya(tsu), you"
+    },
+    {
+      "kanji": "六",
+      "meaning": "six, 6",
+      "onyomi": "roku",
+      "kunyomi": "mu(tsu), mui"
+    },
+    {
+      "kanji": "下",
+      "meaning": "below, down, descend, give, low, inferior",
+      "onyomi": "ka, ge",
+      "kunyomi": "shita, shimo, moto, sa(geru), kuda(ru), o(rosu)"
+    },
+    {
+      "kanji": "来",
+      "meaning": "come, due, next, cause, become",
+      "onyomi": "rai, tai",
+      "kunyomi": "kuru, kitaru, ki, ko"
+    },
+    {
+      "kanji": "気",
+      "meaning": "spirit, mind, air, atmosphere, mood",
+      "onyomi": "ki, ke",
+      "kunyomi": "iki"
+    },
+    {
+      "kanji": "小",
+      "meaning": "little, small",
+      "onyomi": "shou",
+      "kunyomi": "chii(sai), ko-, o-, sa-"
+    },
+    {
+      "kanji": "七",
+      "meaning": "seven, 7",
+      "onyomi": "shichi",
+      "kunyomi": "nana(tsu), nano"
+    },
+    {
+      "kanji": "山",
+      "meaning": "mountain",
+      "onyomi": "san, sen",
+      "kunyomi": "yama"
+    },
+    {
+      "kanji": "話",
+      "meaning": "tale, talk",
+      "onyomi": "wa",
+      "kunyomi": "hana(su), hanashi"
+    },
+    {
+      "kanji": "女",
+      "meaning": "woman, female",
+      "onyomi": "jo",
+      "kunyomi": "onnna, me"
+    },
+    {
+      "kanji": "北",
+      "meaning": "north",
+      "onyomi": "hoku",
+      "kunyomi": "kita"
+    },
+    {
+      "kanji": "午",
+      "meaning": "noon, sign of the horse",
+      "onyomi": "go",
+      "kunyomi": "uma"
+    },
+    {
+      "kanji": "百",
+      "meaning": "hundred",
+      "onyomi": "hyaku, byaku",
+      "kunyomi": "momo"
+    },
+    {
+      "kanji": "書",
+      "meaning": "write",
+      "onyomi": "sho",
+      "kunyomi": "kaku"
+    },
+    {
+      "kanji": "先",
+      "meaning": "before, ahead, previous, future, precedence",
+      "onyomi": "sen",
+      "kunyomi": "saki, ma(zu)"
+    },
+    {
+      "kanji": "名",
+      "meaning": "name, noted, distinguished, reputation",
+      "onyomi": "mei, myou",
+      "kunyomi": "na"
+    },
+    {
+      "kanji": "川",
+      "meaning": "river, stream",
+      "onyomi": "sen",
+      "kunyomi": "kawa"
+    },
+    {
+      "kanji": "千",
+      "meaning": "thousand",
+      "onyomi": "sen",
+      "kunyomi": "chi"
+    },
+    {
+      "kanji": "水",
+      "meaning": "water",
+      "onyomi": "sui",
+      "kunyomi": "mizu"
+    },
+    {
+      "kanji": "半",
+      "meaning": "half, middle, odd number, semi-",
+      "onyomi": "han",
+      "kunyomi": "naka(ba)"
+    },
+    {
+      "kanji": "男",
+      "meaning": "male; man",
+      "onyomi": "dan, nan",
+      "kunyomi": "otoko, o"
+    },
+    {
+      "kanji": "西",
+      "meaning": "west",
+      "onyomi": "sei, sai",
+      "kunyomi": "nishi"
+    },
+    {
+      "kanji": "電",
+      "meaning": "electricity; electric powered",
+      "onyomi": "den",
+      "kunyomi": ""
+    },
+    {
+      "kanji": "校",
+      "meaning": "school, exam",
+      "onyomi": "kou",
+      "kunyomi": ""
+    },
+    {
+      "kanji": "語",
+      "meaning": "word, speech, language",
+      "onyomi": "go",
+      "kunyomi": "kata(ru)"
+    },
+    {
+      "kanji": "土",
+      "meaning": "soil, earth, ground",
+      "onyomi": "do, to",
+      "kunyomi": "tsuchi"
+    },
+    {
+      "kanji": "木",
+      "meaning": "tree, wood",
+      "onyomi": "boku, moku",
+      "kunyomi": "ki, ko"
+    },
+    {
+      "kanji": "聞",
+      "meaning": "to hear; to listen; to ask",
+      "onyomi": "bun, mon",
+      "kunyomi": "ki(ku)"
+    },
+    {
+      "kanji": "食",
+      "meaning": "eat, food",
+      "onyomi": "shoku, jiki",
+      "kunyomi": "k(u), ta(beru), ha(mu)"
+    },
+    {
+      "kanji": "車",
+      "meaning": "car, wheel",
+      "onyomi": "sha",
+      "kunyomi": "kuruma"
+    },
+    {
+      "kanji": "何",
+      "meaning": "what",
+      "onyomi": "ka",
+      "kunyomi": "nani, nan"
+    },
+    {
+      "kanji": "南",
+      "meaning": "south",
+      "onyomi": "nan, na",
+      "kunyomi": "minami"
+    },
+    {
+      "kanji": "万",
+      "meaning": "ten thousand, 10,000",
+      "onyomi": "man, ban",
+      "kunyomi": ""
+    },
+    {
+      "kanji": "毎",
+      "meaning": "every",
+      "onyomi": "mai",
+      "kunyomi": "goto(ni)"
+    },
+    {
+      "kanji": "白",
+      "meaning": "white",
+      "onyomi": "haku, byaku",
+      "kunyomi": "shiro(i)"
+    },
+    {
+      "kanji": "天",
+      "meaning": "heavens, sky, imperial",
+      "onyomi": "ten",
+      "kunyomi": "amatsu"
+    },
+    {
+      "kanji": "母",
+      "meaning": "mother",
+      "onyomi": "bo",
+      "kunyomi": "haha, kaa"
+    },
+    {
+      "kanji": "火",
+      "meaning": "fire",
+      "onyomi": "ka",
+      "kunyomi": "hi, bi, ho"
+    },
+    {
+      "kanji": "右",
+      "meaning": "right (direction)",
+      "onyomi": "u, yuu",
+      "kunyomi": "migi"
+    },
+    {
+      "kanji": "読",
+      "meaning": "to read",
+      "onyomi": "doku, toku, tou",
+      "kunyomi": "yo(mu)"
+    },
+    {
+      "kanji": "友",
+      "meaning": "friend",
+      "onyomi": "yuu",
+      "kunyomi": "tomo"
+    },
+    {
+      "kanji": "左",
+      "meaning": "left",
+      "onyomi": "sa, sha",
+      "kunyomi": "hidari"
+    },
+    {
+      "kanji": "休",
+      "meaning": "rest, day off, retire, sleep",
+      "onyomi": "kyuu",
+      "kunyomi": "yasu(mu)"
+    },
+    {
+      "kanji": "父",
+      "meaning": "father",
+      "onyomi": "fu",
+      "kunyomi": "chichi, tou"
+    },
+    {
+      "kanji": "雨",
+      "meaning": "rain",
+      "onyomi": "u",
+      "kunyomi": "ame, ama"
+    }
+  ]
+}
