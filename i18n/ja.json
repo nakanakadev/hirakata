@@ -8,6 +8,7 @@
     "home": "ホーム",
     "hiragana": "ひらがな",
     "katakana": "カタカナ",
+  "kanji": "漢字",
     "practice": "練習",
     "about": "について",
     "selectLanguage": "言語を選択"
@@ -157,5 +158,44 @@
   "compoundTitle": "拗音（ようおん）カタカナ",
     "practiceButton": "練習を始める",
     "chartButton": "完全な表を見る"
+  },
+  "kanji": {
+    "mainTitle": "JLPT漢字レベル",
+    "mainSubtitle": "JLPTレベル別に漢字を探索しよう",
+    "comingSoon": "近日公開",
+    "errors": {
+      "chartLoad": "漢字表の読み込みに失敗しました。",
+      "dataLoad": "漢字データの読み込みに失敗しました。"
+    },
+    "n5": {
+      "title": "JLPT N5 漢字の練習",
+      "subtitle": "N5漢字を学ぼう",
+      "chartTitle": "JLPT N5 漢字表",
+      "cardTitle": "JLPT N5",
+      "cardDescription": "最も基本的な漢字。初心者に必須。",
+      "count": "~100漢字"
+    },
+    "n4": {
+      "cardTitle": "JLPT N4",
+      "cardDescription": "日常使用の漢字で語彙を広げる。"
+    },
+    "n3": {
+      "cardTitle": "JLPT N3",
+      "cardDescription": "より深い理解のための中級漢字。"
+    },
+    "n2": {
+      "cardTitle": "JLPT N2",
+      "cardDescription": "複雑な文章を読むための上級漢字を習得。"
+    },
+    "n1": {
+      "cardTitle": "JLPT N1",
+      "cardDescription": "ほぼネイティブレベルの流暢さを目指す最上級。"
+    },
+    "table": {
+      "kanji": "漢字",
+      "meaning": "意味",
+      "onyomi": "音読み",
+      "kunyomi": "訓読み"
+    }
   }
 }

@@ -163,6 +163,10 @@
     "mainTitle": "Niveles de Kanji JLPT",
     "mainSubtitle": "Explora los Kanji por niveles de dominio JLPT",
     "comingSoon": "Próximamente",
+    "errors": {
+      "chartLoad": "Error al cargar la tabla de kanji.",
+      "dataLoad": "No se pudieron cargar los datos de los kanji."
+    },
     "n5": {
       "title": "Práctica de Kanji N5",
       "subtitle": "Aprende los Kanji del N5",
