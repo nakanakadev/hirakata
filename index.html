@@ -116,20 +116,18 @@
             homeUrl: "./",
             hiraganaUrl: "./hiragana/",
             katakanaUrl: "./katakana/",
+            kanjiUrl: "./kanji/",
 
             hiraganaClass: "hover:text-indigo-100",
             katakanaClass: "hover:text-indigo-100",
+            kanjiClass: "hover:text-indigo-100",
             hiraganaState:
               "hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 border-2 border-transparent hover:border-white/30",
             katakanaState:
               "hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 border-2 border-transparent hover:border-white/30",
-      extraNavItems: `<a href="#reference-tables"
-             class="group px-6 py-3 text-white hover:text-indigo-100 transition-all duration-300 text-lg font-semibold rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 border-2 border-transparent hover:border-white/30">
-            <span class="flex items-center space-x-2">
-              <span>📚</span>
-              <span data-i18n="navigation.practice">${t("navigation.practice")}</span>
-            </span>
-          </a>`,
+            kanjiState:
+              "hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 border-2 border-transparent hover:border-white/30",
+      extraNavItems: ``,
 
             languageSelector: templateEngine.render(
               languageSelectorComponent,
@@ -181,13 +179,7 @@
         pageTitle: t("home.title"),
         subtitle: t("home.subtitle"),
         // Regenerar extraNavItems para no quedar fijado en idioma previo
-        extraNavItems: `<a href="#reference-tables"
-             class="group px-6 py-3 text-white hover:text-indigo-100 transition-all duration-300 text-lg font-semibold rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 border-2 border-transparent hover:border-white/30">
-            <span class="flex items-center space-x-2">
-              <span>📚</span>
-              <span data-i18n="navigation.practice">${t("navigation.practice")}</span>
-            </span>
-          </a>`
+  extraNavItems: ``
         };
 
               const newRenderedHeader = templateEngine.render(
