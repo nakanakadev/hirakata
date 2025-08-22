@@ -176,8 +176,12 @@
       "count": "~100漢字"
     },
     "n4": {
-      "cardTitle": "JLPT N4",
-      "cardDescription": "日常使用の漢字で語彙を広げる。"
+  "title": "JLPT N4 漢字の練習",
+  "subtitle": "N4漢字を学ぼう",
+  "chartTitle": "JLPT N4 漢字表",
+  "count": "~160+漢字",
+  "cardTitle": "JLPT N4",
+  "cardDescription": "日常使用の漢字で語彙を広げる。"
     },
     "n3": {
       "cardTitle": "JLPT N3",

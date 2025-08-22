@@ -176,8 +176,12 @@
       "count": "~100 Kanjis"
     },
     "n4": {
-      "cardTitle": "JLPT N4",
-      "cardDescription": "Expanding your vocabulary with daily-use kanji."
+  "title": "Kanji N4 Practice",
+  "subtitle": "Learn the N4 Kanji",
+  "chartTitle": "JLPT N4 Kanji Chart",
+  "count": "~160+ Kanjis",
+  "cardTitle": "JLPT N4",
+  "cardDescription": "Expanding your vocabulary with daily-use kanji."
     },
     "n3": {
       "cardTitle": "JLPT N3",
