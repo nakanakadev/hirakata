@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadKanjiData() {
-    fetch('../data/kanji.json')
+    fetch('../../data/kanji.json')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById('kanji-table-body');
