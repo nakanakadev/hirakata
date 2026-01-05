@@ -191,7 +191,17 @@
         "kanji": "Kanji",
         "meaning": "Significado",
         "onyomi": "On'yomi",
-        "kunyomi": "Kun'yomi"
+        "kunyomi": "Kun'yomi",
+        "searchPlaceholder": "Buscar por kanji, significado, kun'yomi...",
+        "noResults": "No se encontraron kanjis que coincidan con la búsqueda.",
+        "loadError": "No se pudieron cargar los datos de los kanji."
     }
+  },
+  "kanji_meanings": {
+    "日": "día, sol, Japón, contador para días",
+    "一": "uno",
+    "国": "país",
+    "人": "persona",
+    "年": "año, contador para años"
   }
 }

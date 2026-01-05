@@ -166,6 +166,14 @@ class I18nManager {
                         if (txt && typeof txt === 'string') node.textContent = txt;
                     }
                 });
+                const placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
+                placeholderNodes.forEach(node => {
+                    const key = node.getAttribute('data-i18n-placeholder');
+                    if(key){
+                        const txt = this.t(key);
+                        if(txt && typeof txt === 'string') node.setAttribute('placeholder', txt);
+                    }
+                });
             }
         } catch(_) { /* ignore */ }
         // Reemplazar tokens de plantilla {{t:clave}} en HTML inyectado (footer, componentes estáticos)

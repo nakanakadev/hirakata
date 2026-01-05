@@ -8,6 +8,7 @@
     "home": "ホーム",
     "hiragana": "ひらがな",
     "katakana": "カタカナ",
+    "kanji": "漢字",
     "practice": "練習",
     "about": "について",
     "selectLanguage": "言語を選択"
@@ -157,5 +158,50 @@
   "compoundTitle": "拗音（ようおん）カタカナ",
     "practiceButton": "練習を始める",
     "chartButton": "完全な表を見る"
+  },
+  "kanji": {
+    "mainTitle": "JLPT漢字レベル",
+    "mainSubtitle": "JLPT能力レベルで漢字を探る",
+    "comingSoon": "近日公開",
+    "n5": {
+      "title": "漢字N5練習",
+      "subtitle": "N5レベル必須漢字を学ぶ",
+      "chartTitle": "JLPT N5漢字一覧",
+      "cardTitle": "JLPT N5",
+      "cardDescription": "初心者にとって不可欠な最も基本的な漢字。",
+      "count": "〜100漢字"
+    },
+    "n4": {
+      "cardTitle": "JLPT N4",
+      "cardDescription": "日常的に使用する漢字で語彙を増やす。"
+    },
+    "n3": {
+      "cardTitle": "JLPT N3",
+      "cardDescription": "より深い理解のための中級漢字。"
+    },
+    "n2": {
+      "cardTitle": "JLPT N2",
+      "cardDescription": "複雑なテキストを読むための上級漢字をマスターする。"
+    },
+    "n1": {
+      "cardTitle": "JLPT N1",
+      "cardDescription": "ネイティブに近い流暢さのための最高レベル。"
+    },
+    "table": {
+      "kanji": "漢字",
+      "meaning": "意味",
+      "onyomi": "音読み",
+      "kunyomi": "訓読み",
+      "searchPlaceholder": "漢字、意味、訓読みで検索...",
+      "noResults": "検索に一致する漢字が見つかりませんでした。",
+      "loadError": "漢字データを読み込めませんでした。"
+    }
+  },
+  "kanji_meanings": {
+    "日": "日、太陽、日本、日数カウンター",
+    "一": "一",
+    "国": "国",
+    "人": "人",
+    "年": "年、年数カウンター"
   }
 }

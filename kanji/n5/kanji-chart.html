@@ -1,13 +1,26 @@
 <div class="bg-white rounded-2xl shadow-2xl p-8 border border-slate-100">
-    <h2 class="text-3xl font-bold text-center mb-8" data-i18n="kanji.chartTitle">Tabla de Kanjis N5</h2>
+    <h2 class="text-3xl font-bold text-center mb-2" data-i18n="kanji.n5.chartTitle">Tabla de Kanjis N5</h2>
+    
     <div class="overflow-x-auto">
         <table class="min-w-full border-collapse">
             <thead>
                 <tr class="bg-slate-100">
-                    <th class="p-4 border border-slate-200 text-lg font-semibold text-slate-700" data-i18n="kanji.table.kanji">Kanji</th>
-                    <th class="p-4 border border-slate-200 text-lg font-semibold text-slate-700" data-i18n="kanji.table.meaning">Significado</th>
-                    <th class="p-4 border border-slate-200 text-lg font-semibold text-slate-700" data-i18n="kanji.table.onyomi">On'yomi</th>
-                    <th class="p-4 border border-slate-200 text-lg font-semibold text-slate-700" data-i18n="kanji.table.kunyomi">Kun'yomi</th>
+                    <th class="p-4 border border-slate-200 text-lg font-semibold text-slate-700">
+                        <span data-i18n="kanji.table.kanji">Kanji</span>
+                        <input type="text" id="kanji-search" class="block w-full mt-1 p-2 border border-slate-300 rounded-md" data-i18n-placeholder="kanji.table.searchPlaceholder">
+                    </th>
+                    <th class="p-4 border border-slate-200 text-lg font-semibold text-slate-700">
+                        <span data-i18n="kanji.table.meaning">Significado</span>
+                        <input type="text" id="meaning-search" class="block w-full mt-1 p-2 border border-slate-300 rounded-md" data-i18n-placeholder="kanji.table.searchPlaceholder">
+                    </th>
+                    <th class="p-4 border border-slate-200 text-lg font-semibold text-slate-700">
+                        <span data-i18n="kanji.table.onyomi">On'yomi</span>
+                        <input type="text" id="onyomi-search" class="block w-full mt-1 p-2 border border-slate-300 rounded-md" data-i18n-placeholder="kanji.table.searchPlaceholder">
+                    </th>
+                    <th class="p-4 border border-slate-200 text-lg font-semibold text-slate-700">
+                        <span data-i18n="kanji.table.kunyomi">Kun'yomi</span>
+                        <input type="text" id="kunyomi-search" class="block w-full mt-1 p-2 border border-slate-300 rounded-md" data-i18n-placeholder="kanji.table.searchPlaceholder">
+                    </th>
                 </tr>
             </thead>
             <tbody id="kanji-table-body">
